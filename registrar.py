@@ -46,7 +46,6 @@ class Institution:
 	def add_course(self, course):
 		self.courses_catalog.append(course)
 
-	# How to add course to schedule without year and quarter?
 	def add_course_offering(self, courseOffering):
 		if courseOffering.year not in self.courses_schedule:
 			self.courses_schedule[courseOffering.year] = dict()
@@ -85,8 +84,7 @@ class Instructor(Person):
 		self.courses_schedule = new_dict
 
 		return self.courses_schedule
-	
-	# instructor needs a behavior to add course right?
+
 
 class Student(Person):
 	def __init__(self, last_name, first_name, school, date_of_birth, username, affiliation, email):
